@@ -1,0 +1,17 @@
+http.host: 0.0.0.0
+
+# Uncomment the following lines for a production cluster deployment
+#transport.host: 0.0.0.0
+#discovery.zen.minimum_master_nodes: 1
+# 增加如下字段
+cluster.name: elasticsearch-cluster
+node.name: es-node01
+network.host: 0.0.0.0
+http.port: 9200
+transport.tcp.port: 9300
+http.cors.enabled: true
+http.cors.allow-origin: "*"
+node.master: true 
+node.data: true
+discovery.zen.ping.unicast.hosts: ["130.168.1.184:9300","130.168.1.184:9301","130.168.1.184:9302"]
+discovery.zen.minimum_master_nodes: 2
